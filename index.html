@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compost Carbon to Nitrogen Ratio Calculator — 30:1 Hot Composting — Accurate Material Estimator</title>
+  <meta name="description" content="Calculate optimal 30:1 Carbon to Nitrogen (C:N) recipe ratios mixing dry autumn leaves, wood shavings, kitchen scraps, and grass clippings.">
+  <link rel="canonical" href="https://sebiglesias.com.ar/compost-c-to-n-ratio-calculator/">
+  <meta name="theme-color" content="#84cc16">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Compost Carbon to Nitrogen Ratio Calculator — 30:1 Hot Composting">
+  <meta property="og:description" content="Calculate optimal 30:1 Carbon to Nitrogen (C:N) recipe ratios mixing dry autumn leaves, wood shavings, kitchen scraps, and grass clippings.">
+  <meta property="og:url" content="https://sebiglesias.com.ar/compost-c-to-n-ratio-calculator/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Compost Carbon to Nitrogen Ratio Calculator \u2014 30:1 Hot Composting",
+    "url": "https://sebiglesias.com.ar/compost-c-to-n-ratio-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "description": "Calculate optimal 30:1 Carbon to Nitrogen (C:N) recipe ratios mixing dry autumn leaves, wood shavings, kitchen scraps, and grass clippings.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the optimal Carbon to Nitrogen (C:N) ratio for hot composting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The biological sweet spot for rapid hot composting is **30:1** (30 parts carbon to 1 part nitrogen by weight). At 30:1, beneficial thermophilic bacteria have the exact balance of energy (carbon) and protein (nitrogen) needed to rapidly multiply and raise internal pile temperatures to 135\u00b0F\u2013160\u00b0F, killing all weed seeds and pathogens in 3 to 5 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my compost pile smell like ammonia or rotten eggs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A foul-smelling compost pile means your C:N ratio is too low (excess nitrogen from too many kitchen scraps or fresh grass clippings) and the pile is anaerobic (lacking oxygen). Fix it immediately by turning the pile and mixing in 2 to 3 times more dry carbon 'browns' (dry autumn leaves, shredded cardboard, or clean wood shavings)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are used coffee grounds considered a 'Brown' or a 'Green'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Even though used coffee grounds are brown in color, chemically they are a powerful **'Green'** with an extremely rich C:N ratio of approximately 12:1 to 20:1. Coffee grounds provide abundant nitrogen that kick-starts intense heat inside microbial compost piles."
+        }
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">🍂 Biological Composting & Permaculture</div>
+      <h1>Compost Carbon to Nitrogen (C:N) Ratio Calculator</h1>
+      <p class="subtitle">Calculate exact Browns (Carbon) to Greens (Nitrogen) bucket ratios for rapid odorless 140°F thermophilic decomposition.</p>
+    </header>
+
+    <!-- AdSense Top Banner -->
+    <div style="text-align:center; margin: 16px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="calc-grid">
+      <!-- Inputs Card -->
+      <form class="card" id="compost-c-to-n-ratio-calculator-form" onsubmit="event.preventDefault();">
+        <h2>📐 Compost Pile Recipe Inputs</h2>
+        
+        <div class="input-row">
+          <div class="form-group">
+            <label for="brownType">Primary Carbon Source ("Browns")</label>
+            <select id="brownType">
+              <option value="60" selected>Dry Autumn Leaves (C:N 60:1)</option>
+              <option value="400">Wood Shavings / Sawdust (C:N 400:1)</option>
+              <option value="80">Straw / Dry Hay (C:N 80:1)</option>
+              <option value="350">Shredded Cardboard / Newsprint (C:N 350:1)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="brownBuckets">Browns Volume (Buckets / Parts)</label>
+            <div class="input-wrap">
+              <input type="number" id="brownBuckets" step="1" min="1" value="3" required>
+              <span class="input-suffix">buckets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label for="greenType">Primary Nitrogen Source ("Greens")</label>
+            <select id="greenType">
+              <option value="20" selected>Kitchen Fruit & Veggie Scraps (C:N 20:1)</option>
+              <option value="18">Fresh Green Grass Clippings (C:N 18:1)</option>
+              <option value="12">Used Coffee Grounds (C:N 12:1 - Nitrogen Rich)</option>
+              <option value="15">Chicken / Farm Poultry Manure (C:N 15:1)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="greenBuckets">Greens Volume (Buckets / Parts)</label>
+            <div class="input-wrap">
+              <input type="number" id="greenBuckets" step="1" min="1" value="1" required>
+              <span class="input-suffix">buckets</span>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Results Card -->
+      <div class="card">
+        <h2>🎯 Batch C:N Ratio & Decomposition Speed</h2>
+        
+        <div class="result-hero">
+          <div class="result-label">Calculated Overall Batch C:N Ratio</div>
+          <div class="result-number" id="finalRatio">30 : 1</div>
+          <div class="result-label" style="color:#ffffff;" id="ratioVerdict">Ideal Gold Standard Ratio (Fast Hot Composting)</div>
+          <div style="font-size:0.95rem; color:#d9f99d; margin-top:6px;" id="tempEstimate">Reaches 135°F–155°F Thermophilic Kill Zone in 48 Hours</div>
+        </div>
+
+        <div class="sub-hero-grid">
+          <div class="sub-hero-col">
+            <div class="sub-hero-label">Odor Risk Assessment</div>
+            <div class="sub-hero-val" id="odorRisk" style="color:#4ade80;">Zero Smell / Sweet Forest</div>
+            <div class="sub-hero-sub">Balanced aerobic breakdown</div>
+          </div>
+          <div class="sub-hero-col">
+            <div class="sub-hero-label">Finished Compost Time</div>
+            <div class="sub-hero-val" id="finishTime">4–6 Weeks</div>
+            <div class="sub-hero-sub">With weekly turning & water</div>
+          </div>
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-desc">Moisture Target</div>
+            <div class="spec-val">50% (Wrung-Out Sponge)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Minimum Pile Volume</div>
+            <div class="spec-val">3ft × 3ft × 3ft (1 Cu Yd)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Weed Seeds & Pathogens</div>
+            <div class="spec-val" style="color:#a3e635;">100% Destroyed by Heat</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Nitrogen Loss in Air</div>
+            <div class="spec-val">Zero (No Ammonia Gas)</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Amazon Supplies Box -->
+    <section class="supplies-card">
+      <h3>🛠️ Recommended Tools, Hardware & Building Supplies</h3>
+      <div class="supplies-grid">
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">REOTEMP 20-Inch Heavy Duty Backyard Compost Thermometer (0-200°F)</div>
+            <div class="supply-desc">Hermetically sealed stainless steel dial thermometer accurately tracks internal pile thermophilic heat.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=reotemp+compost+thermometer+20+inch&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">FCMP Outdoor IM4000 Dual Chamber Tumbling Composter (37-Gallon)</div>
+            <div class="supply-desc">BPA-free dual rotatable chambers allow continuous composting while cured compost finishes decomposing.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=fcmp+outdoor+dual+chamber+tumbler+composter&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Wakefield Biochar Organic Soil Conditioner (1 Gallon)</div>
+            <div class="supply-desc">Activated biochar inoculates compost with mycorrhizal fungi and eliminates volatile organic odors.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=wakefield+biochar+soil+conditioner&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Dumble Heavy-Duty 5-Tine Steel Compost Manure Pitchfork</div>
+            <div class="supply-desc">Forged steel oval tines easily penetrate, fluff, and aerate dense compost piles and straw bales.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=compost+turning+pitchfork+5+tine&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:14px; margin-bottom:0; text-align:center;">
+        ⚖️ <em>Affiliate Notice: As an Amazon Associate, this site earns from qualifying purchases at no additional cost to you. We strictly link to trade-grade construction tools, hardware, and safety materials.</em>
+      </p>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section">
+      <h2 style="font-size:1.35rem; color:#ffffff; margin-bottom:16px;">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What is the optimal Carbon to Nitrogen (C:N) ratio for hot composting?</div>
+        <div class="faq-a">The biological sweet spot for rapid hot composting is **30:1** (30 parts carbon to 1 part nitrogen by weight). At 30:1, beneficial thermophilic bacteria have the exact balance of energy (carbon) and protein (nitrogen) needed to rapidly multiply and raise internal pile temperatures to 135°F–160°F, killing all weed seeds and pathogens in 3 to 5 days.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why does my compost pile smell like ammonia or rotten eggs?</div>
+        <div class="faq-a">A foul-smelling compost pile means your C:N ratio is too low (excess nitrogen from too many kitchen scraps or fresh grass clippings) and the pile is anaerobic (lacking oxygen). Fix it immediately by turning the pile and mixing in 2 to 3 times more dry carbon 'browns' (dry autumn leaves, shredded cardboard, or clean wood shavings).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are used coffee grounds considered a 'Brown' or a 'Green'?</div>
+        <div class="faq-a">Even though used coffee grounds are brown in color, chemically they are a powerful **'Green'** with an extremely rich C:N ratio of approximately 12:1 to 20:1. Coffee grounds provide abundant nitrogen that kick-starts intense heat inside microbial compost piles.</div>
+      </div>
+    </section>
+
+    <!-- Bottom AdSense Banner -->
+    <div style="text-align:center; margin: 32px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href="https://sebiglesias.com.ar/">sebiglesias.com.ar</a> · Compost Carbon to Nitrogen Ratio Calculator — 30:1 Hot Composting. Educational and trade reference tool.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

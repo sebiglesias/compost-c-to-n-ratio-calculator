@@ -1,0 +1,15 @@
+{
+  "name": "Compost Carbon to Nitrogen Ratio Calculator \u2014 30:1 Hot Composting",
+  "short_name": "Compost Ratio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a1106",
+  "theme_color": "#84cc16",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
